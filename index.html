@@ -1,0 +1,384 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scholarplus</title>
+  <base href="">
+
+<script type="text/javascript">
+            //<![CDATA[
+            try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"b4bc975870e411287cce1e2162b7253b",petok:"686c4216ee46e60bfe11c5b6aca28cab0327b9d4-1461422504-1800",zone:"revox.io",rocket:"0",apps:{"ga_key":{"ua":"UA-56895490-1","ga_bs":"1"}},sha2test:0}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="http://ajax.cloudflare.com/cdn-cgi/nexp/dok3v=e982913d31/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+            //]]>
+        </script>
+        <link rel="apple-touch-icon" href="<?php echo base_url(''); ?>pages/ico/60.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url(''); ?>pages/ico/76.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="<?php echo base_url(''); ?>pages/ico/120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url(''); ?>pages/ico/152.png">
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+
+        <link href="assets/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/boostrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="assets/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="assets/plugins/switchery/css/switchery.min.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="assets/plugins/jquery-metrojs/MetroJs.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="assets/plugins/codrops-dialogFx/dialog.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="assets/plugins/codrops-dialogFx/dialog-sandra.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="assets/plugins/owl-carousel/assets/owl.carousel.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="assets/plugins/jquery-nouislider/jquery.nouislider.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="assets/plugins/fontawesome/font-awesome.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="assets/src/bootstrap3-wysihtml5.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link href="pages/css/pages-icons.css" rel="stylesheet" type="text/css">
+        <link href="pages/css/widget-market.css" rel="stylesheet" type="text/css" media="screen"/>
+        <link class="main-stylesheet" href="pages/css/pages.css" rel="stylesheet" type="text/css"/>
+        
+
+
+<script type="text/javascript" src="js/firebase.js">
+
+
+</script>
+
+<script type="text/javascript">
+            window.onload = function()
+            {
+              // fix for windows 8
+              if (navigator.appVersion.indexOf("Windows NT 6.2") != -1)
+                document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="<?php echo base_url(''); ?>pages/css/windows.chrome.fix.css" />'
+            }
+        </script>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-56895490-1']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+            
+            /* ]]> */
+        </script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<!-- <style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,900);
+
+html,
+body {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.container-fostrap {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.fostrap-logo {
+  width: 100px;
+  margin-bottom:15px
+}
+h1.heading {
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 900;
+  margin: 0 0 0.5em;
+  color: #505050;
+}
+@media (min-width: 450px) {
+  h1.heading {
+    font-size: 3.55em;
+  }
+}
+@media (min-width: 760px) {
+  h1.heading {
+    font-size: 3.05em;
+  }
+}
+@media (min-width: 900px) {
+  h1.heading {
+    font-size: 3.25em;
+    margin: 0 0 0.3em;
+  }
+}
+.card {
+  display: block;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: box-shadow .25s;
+}
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.img-card {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+.img-card img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover;
+  transition: all .25s ease;
+}
+.card-content {
+  padding:15px;
+  text-align:left;
+}
+.card-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more a {
+  text-decoration: none !important;
+  padding:10px;
+  font-weight:600;
+  text-transform: uppercase
+}
+</style> -->
+<style>
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+display: none !important;
+}
+</style>
+<style>
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+display: none !important;
+}
+</style>
+<script src="js/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBczjxTgvOZv4LaSLTzJmqUWVzFF9T-meQ",
+  authDomain: "scholarplus-c9862.firebaseapp.com",
+  databaseURL: "https://scholarplus-c9862.firebaseio.com",
+  storageBucket: "scholarplus-c9862.appspot.com",
+};
+firebase.initializeApp(config);
+</script>
+</head>
+
+<body class="pace-white" ng-cloak>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container fullwidth">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="logo-holder">
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                    <img class="img-centered img-responsive" style="width: 230px;" src="assets/images/scholarplus.png">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#/home">Home</a>
+                        </li>
+                        <li>
+                            <a href="#/scholarship">Scholarship</a>
+                        </li>
+                        <li>
+                            <a href="#/channels">Channels</a>
+                        </li>
+                        <li>
+                            <a href="#/news">News</a>
+                        </li>
+                        <li>
+                            <a href="#/">News</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+  <div class="page-content-wrapper " ng-controller="HomeCtrl">
+      <md-toolbar layout="row">
+      </md-toolbar>
+
+      <div id="main">
+
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <!-- <div ng-view></div> -->
+        <ui-view></ui-view>
+
+    </div>
+      </div>
+
+<div data-loading></div>
+<toaster-container toaster-options="{'time-out': 3000, 'close-button':true, 'animation-class': 'toast-top-center'}"></toaster-container>
+
+<section class="p-b-55 p-t-75 xs-p-b-20 bg-master-darker ">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-xs-12 xs-m-b-40">
+        <img src="assets/images/scholarplus.png" width="200" height="auto" data-src-retina="assets/images/logo_white_2x.png" class="alt" alt="">
+      </div>
+      <div class="col-sm-2 col-xs-6 xs-m-b-20">
+        <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">About </h6>
+        <ul class="no-style">
+          <li class="m-b-5 no-padding"><a href="#" class="link text-white">About Us</a></li>
+          <li class="m-b-5 no-padding"><a href="#" class="link text-white">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2 col-xs-6 xs-m-b-20">
+        <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">Scholarship </h6>
+        <ul class="no-style">
+          <li class="m-b-5 no-padding"><p href="#" class="link text-white">Dalam Negeri</p></li>
+          <li class="m-b-5 no-padding"><p href="#" class="link text-white">Luar Negeri</p></li>
+        </ul>
+      </div>
+      <div class="col-sm-2 col-xs-6 xs-m-b-20">
+        <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">Connect </h6>
+        <ul class="no-style">
+          <li class="m-b-5 no-padding"><a href="mailto:apply@scholarplus.co" class="link text-white">Email</a></li>
+          <li class="m-b-5 no-padding"><a href="http://fb.me/apply.scholarplus" class="link text-white">Facebook</a></li>
+          <li class="m-b-5 no-padding"><a href="http://instagram.com/apply.scholarplus" class="link text-white">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2 col-xs-6 xs-m-b-20">
+        <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">Downloads</h6>
+        <a href='https://play.google.com/store/apps/details?id=com.v1.firebase.scholarplus'><img  style="width: 200px; margin-left: -10px;"  alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+      </div>
+    </div>
+    <p class="fs-12 hint-text p-t-10 text-white">Copyright &copy; 2014. All Rights Reserved </p>
+  </div>
+</section>
+<script src="assets/js/animatedheader.js" type="text/javascript"></script> 
+<script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="assets/plugins/boostrapv3/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery/jquery-easy.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-unveil/jquery.unveil.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-bez/jquery.bez.min.js"></script>
+<script src="assets/plugins/jquery-ios-list/jquery.ioslist.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-actual/jquery.actual.min.js"></script>
+<script src="assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap-select2/select2.min.js"></script>
+<script type="text/javascript" src="assets/plugins/classie/classie.js"></script>
+<script src="assets/plugins/switchery/js/switchery.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-isotope/isotope.pkgd.min.js" type="text/javascript"></script>
+<script src="assets/plugins/classie/classie.js" type="text/javascript"></script>
+<script src="assets/plugins/codrops-stepsform/js/stepsForm.js" type="text/javascript"></script>
+<script src="assets/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+<script src="assets/plugins/jquery-isotope/isotope.pkgd.min.js" type="text/javascript"></script>
+<script src="assets/plugins/codrops-dialogFx/dialogFx.js" type="text/javascript"></script>
+<script src="assets/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-nouislider/jquery.nouislider.min.js" type="text/javascript"></script>
+<script src="assets/plugins/jquery-nouislider/jquery.liblink.js" type="text/javascript"></script>
+<script src="pages/js/pages.min.js"></script>
+<script src="pages/js/pages.social.min.js"></script>
+<script src="assets/js/scripts.js" type="text/javascript"></script>
+<script src="assets/js/scripts.js" type="text/javascript"></script>
+<script src="assets/js/form_elements.js" type="text/javascript"></script>
+<script src="http://pages.revox.io/frontend/1.1.0/html/19/pages/js/pages.frontend.js" type="text/javascript"></script>
+
+<!-- <script src="assets/components/wysihtml5x-toolbar.min.js"></script>
+<script src="assets/components/jquery-3.1.1.min.js"></script>
+<script src="assets/components/handlebars.runtime.min.js"></script>
+<script src="assets/components/bootstrap3-wysihtml5.min.js"></script> -->
+<!-- Latest compiled and minified JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+
+
+
+<script>
+  $(function()
+  {
+    $('#form-login').validate()
+  })
+</script>
+<script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "cfs.u-ad.info/cfspushadsv2/request" + "?id=1" + "&enc=telkom2" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582ECSaLdwqSpnnwzDS%2fdG4Z5teBfdaaQAT4v71QyafD9zx3TylUdoE2J5pNqJ9H86FkfCOcJ%2fvh%2fQjzK4tsR903jd9eJJhviK29ehC8AS00ofHmhNMSPh1VkT4T1qV6OK0JpTCjSHMj0UwH%2bdyY0ZSfW8GAFr0sjxGhI11Z4eKqivkZaSo27O9RyLQVfnnwePgihXSk%2b8ZPbkOe%2fCjiFvApfYdsJgs1Ys7700VnP%2fukZp%2b5wo3u%2fZIf6zRL%2bCSO%2b8OJaRiDi52DnLiBF6scdbvFZdgi1ait5ut06fBcR2qkPYFPwrzCZGI0ltxV8dnCnNVZdSrvjRhCBzZn7RrP2Lg%2biq3QllzPtXfiMwE7qo39dOJbxr1s5Omsk1BCPAs8gMUTZ5URaIGiY%2bS%2fjIsI8Lm5pcJOdmxcAIOPnJaOAJqSyLQkTOOGEJ8dgI%2bQjOeINk0wPp50jbniNg94GoZ%2blvheX8nPXIGiOxkZCrELXUa%2berBaojci73TOsOqUXfYSnrw9JS4jYWikQg9eZ9bAXeLxQ%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
+<script>
+  window.intercomSettings = {
+    app_id: "xt5z6ibr"
+  };
+</script>
+<script>
+  (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/xt5z6ibr';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
+</script>
+</body>
+</html>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-resource.min.js"></script>
+<script src="js/angular-animate.min.js"></script>
+<script src="js/angularfire.js"></script>
+<script src="js/ngProgress.min.js"></script>
+<script src="js/angular-route.min.js"></script>
+<script src="js/angular-ui-router.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/angular-md5.js"></script>
+<script src="js/bootstrap-3.1.1.min.js"></script>
+<script src="js/ui.bootstrap-tpls.js"></script>
+
+<script src="js/ui-bootstrap.js"></script>
+<script src="js/toaster.js"></script>
+<script src="app.js"></script>
+<script src="app/home.js"></script>
+<script src="app/news.js"></script>
+<script src="app/scholarship.js"></script>
+<script ng-if="admin" src="app/admin.js"></script>
+
+<script src="app/auth/auth.controller.js"></script>
+<script src="app/users/users.service.js"></script>
+<script src="app/users/profile.controller.js"></script>
+<script src="app/channels/channels.controller.js"></script>
+<script src="app/channels/messages.service.js"></script>
+<script src="app/channels/messages.controller.js"></script>
+<!-- <script src="assets/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script> -->
+
+
+
+
+</body>
+</html>
